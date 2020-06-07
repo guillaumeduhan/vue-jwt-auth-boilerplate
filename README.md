@@ -1,6 +1,6 @@
 # Vue Jwt Auth Boilerplate
 
-![logo](https://repository-images.githubusercontent.com/217154004/312a6600-802c-11ea-9de1-d539825cc1f1)
+![logo](https://repository-images.githubusercontent.com/270407041/175b2000-a905-11ea-979e-928036644773)
 
 - Vue-CLI 3
 - Vuex
