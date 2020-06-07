@@ -1,19 +1,46 @@
-# vue-jwt-auth-boilerplate
+# Vue Jwt Auth Boilerplate
 
-## Project setup
+![logo](https://repository-images.githubusercontent.com/217154004/312a6600-802c-11ea-9de1-d539825cc1f1)
+
+- Vue-CLI 3
+- Vuex
+- Vue-Router
+- Sass/Scss
+
+## Getting Started
+
+Clone project and enter in folder:
+
 ```
-npm install
+cd vue-jwt-auth-boilerplate
 ```
 
-### Compiles and hot-reloads for development
+Run npm install:
+
+```
+npm i
+```
+
+Enjoy:
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Built With
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [Vue CLI](https://cli.vuejs.org/) - Standard Tooling for Vue.js Development
+- [Vuex](https://vuex.vuejs.org/) - Vuex is a state management pattern + library for Vue.js applications.
+- [Vue-Router](https://router.vuejs.org/) - Vue Router is the official router for Vue.js.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning.
+
+## Authors ✨
+
+- **guillaumeduhan** - _Initial work_ - [Github](https://github.com/guillaumeduhan)
+
+## License
+
+This project is licensed under the MIT License.
