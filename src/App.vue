@@ -1,12 +1,18 @@
 <template>
 	<div id="app">
-		<div id="nav">
-			<router-link to="/">Home</router-link>|
-			<router-link to="/about">About</router-link>
-		</div>
+		<div>{{ isUserLoggedIn ? "Logged in" : "Log out" }}</div>
 		<router-view />
 	</div>
 </template>
+
+<script>
+import AuthMixin from "./mixins/AuthMixin";
+
+export default {
+	name: "App",
+	mixins: [AuthMixin]
+};
+</script>
 
 <style lang="scss">
 #app {
