@@ -1,7 +1,7 @@
-import { ADD_NAME } from '../../mutations-type'
+import { SAVE_USER_TOKEN } from '../../mutations-type'
 
 export default {
-  [ADD_NAME](state, payload) {
-    state.name = payload
+  [SAVE_USER_TOKEN]: (state, token) => {
+    state.jwt = token
   },
 }

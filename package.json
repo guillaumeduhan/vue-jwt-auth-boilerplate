@@ -1,6 +1,7 @@
 {
   "name": "vue-jwt-auth-boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "author": "Guillaume Duhan",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

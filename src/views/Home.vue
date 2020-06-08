@@ -17,15 +17,9 @@ export default {
 	},
 	mounted() {
 		Auth.login({
-			identifier: "",
-			password: ""
-		})
-			.then(data => {
-				console.log(data);
-			})
-			.catch(err => {
-				console.log(err);
-			});
+			identifier: "Guillaume",
+			password: "password"
+		});
 	}
 };
 </script>
