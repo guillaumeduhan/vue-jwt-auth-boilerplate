@@ -17,8 +17,8 @@ export default {
 	},
 	mounted() {
 		Auth.login({
-			identifier: "Guillaume",
-			password: "password"
+			identifier: "",
+			password: ""
 		});
 	}
 };
