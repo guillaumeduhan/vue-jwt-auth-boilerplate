@@ -5,11 +5,19 @@ const AuthMixin = {
   computed: {
     ...mapGetters(["isUserLoggedIn"])
   },
+  methods: {
+    login(identifier, password) {
+      Auth.login({
+        identifier,
+        password
+      });
+    },
+    logout() {
+      Auth.logout()
+    }
+  },
   mounted() {
-    Auth.login({
-      identifier: "",
-      password: ""
-    });
+    this.login("", "")
   }
 }
 

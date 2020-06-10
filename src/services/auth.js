@@ -1,6 +1,4 @@
-import * as a from "../store/actions-type"
 import axios from "axios";
-import store from "../store/index";
 
 const STRAPI_URL = `http://localhost:1337`
 
@@ -13,14 +11,12 @@ const axiosInstance = axios.create({
 });
 
 export default {
-  login: async (payload) => {
+  login: async ({ identifier, password }) => {
     return axiosInstance
-      .post(`${STRAPI_URL}/auth/local`, payload)
-      .then((data) => {
-        store.dispatch(a.SET_USER_TOKEN, data.data.jwt)
-      })
-      .catch((err) => {
-        return err
-      })
+      .post(`${STRAPI_URL}/auth/local`, { identifier, password })
   },
+  logout: async () => {
+    return axiosInstance
+      .post(`${STRAPI_URL}/logout`)
+  }
 }
