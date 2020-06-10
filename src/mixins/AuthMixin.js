@@ -10,14 +10,35 @@ const AuthMixin = {
       Auth.login({
         identifier,
         password
-      });
+      })
+        .then((data) => {
+          console.log(data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     },
     logout() {
       Auth.logout()
+        .then((data) => {
+          console.log(data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    test() {
+      Auth.test()
+        .then((data) => {
+          console.log(data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
   },
   mounted() {
-    this.login("", "")
+    this.login("Guillaume", "password")
   }
 }
 

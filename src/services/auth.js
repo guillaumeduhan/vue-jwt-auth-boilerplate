@@ -18,5 +18,9 @@ export default {
   logout: async () => {
     return axiosInstance
       .post(`${STRAPI_URL}/logout`)
+  },
+  test: async () => {
+    return axiosInstance
+      .get(`${STRAPI_URL}/invoices`)
   }
 }
