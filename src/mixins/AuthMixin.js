@@ -11,12 +11,6 @@ const AuthMixin = {
         identifier,
         password
       })
-        .then((data) => {
-          console.log(data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
     },
     logout() {
       Auth.logout()

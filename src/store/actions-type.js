@@ -1,1 +1,1 @@
-export const SET_USER_TOKEN = "SET_USER_TOKEN"
+export const SAVE_USER_STATUS = "SAVE_USER_STATUS"

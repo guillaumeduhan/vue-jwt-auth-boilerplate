@@ -1,6 +1,6 @@
 export default {
   isUserLoggedIn: (state) => {
-    return state.token ? true : false
+    return state.status === 'Authenticated'
   },
   getUser: (state) => state,
 }

@@ -1,7 +1,7 @@
-import { SAVE_USER_TOKEN } from '../../mutations-type'
+import { SET_USER_STATUS } from '../../mutations-type'
 
 export default {
-  [SAVE_USER_TOKEN]: (state, token) => {
-    state.token = token
+  [SET_USER_STATUS]: (state, status) => {
+    state.status = status
   },
 }
