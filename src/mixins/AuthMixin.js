@@ -3,7 +3,7 @@ import Auth from "../services/auth"
 
 const AuthMixin = {
   computed: {
-    ...mapGetters(["isUserLoggedIn"])
+    ...mapGetters(["getUserStatus"])
   },
   methods: {
     login(identifier, password) {
@@ -14,12 +14,6 @@ const AuthMixin = {
     },
     logout() {
       Auth.logout()
-        .then((data) => {
-          console.log(data)
-        })
-        .catch((err) => {
-          console.log(err)
-        })
     },
     test() {
       Auth.test()
@@ -31,9 +25,6 @@ const AuthMixin = {
         })
     }
   },
-  mounted() {
-    this.login("Guillaume", "password")
-  }
 }
 
 export default AuthMixin;

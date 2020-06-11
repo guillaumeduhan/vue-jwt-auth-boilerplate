@@ -1,5 +1,5 @@
 export default {
-  isUserLoggedIn: (state) => {
+  getUserStatus: (state) => {
     return state.status === 'Authenticated'
   },
   getUser: (state) => state,

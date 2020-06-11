@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
-		<div>{{ isUserLoggedIn }}</div>
+		<div>{{ getUserStatus }}</div>
+		<p @click="login('Guillaume', 'password')">Login</p>
 		<p @click="logout">Logout</p>
 		<p @click="test">Get invoices</p>
 		<router-view />

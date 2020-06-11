@@ -7,9 +7,9 @@ const STRAPI_URL = `http://localhost:1337`
 const axiosInstance = axios.create({
   baseURL: STRAPI_URL,
   headers: {
-    "Content-Type": "application/json",
-    Authorization: "", // retrieve auth_token
+    "Content-Type": "application/json"
   },
+  withCredentials: true
 });
 
 export default {
@@ -17,7 +17,8 @@ export default {
     return axiosInstance
       .post(`${STRAPI_URL}/auth/local`, { identifier, password })
       .then((data) => {
-        store.dispatch("SAVE_USER_STATUS", data.data.status)
+        console.log(data)
+        store.dispatch(SAVE_USER_STATUS, data.data.status)
       })
       .catch((err) => {
         console.log(err)
@@ -27,14 +28,16 @@ export default {
     return axiosInstance
       .post(`${STRAPI_URL}/logout`)
       .then(() => {
-        store.dispatch("SAVE_USER_STATUS", undefined)
+        store.dispatch(SAVE_USER_STATUS, undefined)
       })
       .catch((err) => {
         console.log(err)
       })
   },
   test: async () => {
-    return axiosInstance
+    const { data } = await axiosInstance
       .get(`${STRAPI_URL}/invoices`)
+
+    console.log(data)
   }
 }
